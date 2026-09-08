@@ -7,10 +7,10 @@ import { Sparkles, Settings, Users, Package, CheckCircle2 } from 'lucide-react';
 import HomeCTA from '../components/home/HomeCTA';
 
 const iconMap: Record<string, React.ReactNode> = {
-  Sparkles: <Sparkles size={40} />,
-  Settings: <Settings size={40} />,
-  Users: <Users size={40} />,
-  Package: <Package size={40} />,
+  Sparkles: <Sparkles size={36} />,
+  Settings: <Settings size={36} />,
+  Users: <Users size={36} />,
+  Package: <Package size={36} />,
 };
 
 const imageMap: Record<string, string> = {
@@ -28,7 +28,7 @@ export default function Services() {
         subtitle="Complete Facility Solutions. One Reliable Partner."
       />
       
-      <section className="py-24 bg-gray-50">
+      <section className="py-32 bg-gray-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading 
             title="From Cleanliness to Maintenance" 
@@ -36,33 +36,34 @@ export default function Services() {
             centered
           />
           
-          <div className="mt-16 space-y-24">
+          <div className="mt-24 space-y-32">
             {services.map((service, index) => (
               <div 
                 key={service.id} 
                 id={service.id}
-                className={`flex flex-col lg:flex-row gap-12 items-center ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+                className={`flex flex-col lg:flex-row gap-16 items-center ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
               >
                 <div className="w-full lg:w-1/2 relative group">
-                  <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 relative">
+                  <div className="rounded-3xl overflow-hidden shadow-2xl border-8 border-white relative z-10 transform group-hover:scale-[1.02] transition-transform duration-700">
                     <img 
                       src={imageMap[service.id]} 
                       alt={service.title} 
-                      className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-[500px] object-cover"
                     />
                     <div className="absolute inset-0 bg-corporate-navy/10 group-hover:bg-transparent transition-colors duration-500"></div>
                   </div>
-                  <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-corporate-light rounded-xl -z-10"></div>
+                  {/* Decorative background shape */}
+                  <div className={`absolute top-1/2 -translate-y-1/2 w-full h-full bg-corporate-blue/10 rounded-full blur-3xl -z-10 ${index % 2 !== 0 ? '-left-12' : '-right-12'}`}></div>
                 </div>
                 
-                <div className="w-full lg:w-1/2">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-corporate-blue text-white mb-6 shadow-md">
+                <div className="w-full lg:w-1/2 lg:px-8">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white shadow-xl text-corporate-blue mb-8">
                     {iconMap[service.iconName]}
                   </div>
-                  <h3 className="text-3xl font-bold text-corporate-navy mb-4">{service.title}</h3>
-                  <p className="text-xl text-gray-600 mb-8">{service.description}</p>
+                  <h3 className="text-4xl font-extrabold text-corporate-navy mb-6 tracking-tight">{service.title}</h3>
+                  <p className="text-xl text-gray-600 mb-10 leading-relaxed">{service.description}</p>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                     {service.items.map((item, i) => (
                       <div key={i} className="flex items-start">
                         <CheckCircle2 className="text-corporate-accent mt-0.5 mr-3 shrink-0" size={20} />

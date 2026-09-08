@@ -5,6 +5,7 @@ import { clients } from '../data/clients';
 import HomeCTA from '../components/home/HomeCTA';
 import { Shield, Building, Award } from 'lucide-react';
 import { assets } from '../data/assets';
+import { ClientLogo } from '../components/common/ClientLogo';
 
 export default function Clients() {
   return (
@@ -15,7 +16,7 @@ export default function Clients() {
         image={assets.images.iseTowers}
       />
       
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading 
             title="Strong Partnerships for a Brighter Tomorrow" 
@@ -23,42 +24,40 @@ export default function Clients() {
             centered
           />
           
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {clients.map((client) => (
               <div 
                 key={client.id}
-                className="bg-gray-50 h-32 rounded-xl flex items-center justify-center p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-corporate-blue/20 transition-all group"
+                className="bg-white h-40 rounded-2xl flex items-center justify-center border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-default text-gray-400 hover:text-corporate-navy"
               >
-                <span className="text-center font-bold text-gray-500 group-hover:text-corporate-navy transition-colors">
-                  {client.name}
-                </span>
+                <ClientLogo name={client.name} svgData={client.logoSvg} />
               </div>
             ))}
           </div>
 
-          <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gray-100 pt-16">
-            <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-corporate-light rounded-full flex items-center justify-center text-corporate-blue mb-4">
-                <Building size={32} />
+          <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-sm border border-gray-100">
+              <div className="w-20 h-20 bg-corporate-light rounded-2xl flex items-center justify-center text-corporate-blue mb-6">
+                <Building size={40} />
               </div>
-              <h3 className="text-xl font-bold text-corporate-navy mb-2">Multiple Sectors</h3>
-              <p className="text-gray-600 text-sm">Serving diverse industries with tailored facility management solutions.</p>
+              <h3 className="text-2xl font-bold text-corporate-navy mb-4">Multiple Sectors</h3>
+              <p className="text-gray-600 leading-relaxed">Serving diverse industries with tailored facility management solutions designed for specific environments.</p>
             </div>
             
-            <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-corporate-light rounded-full flex items-center justify-center text-corporate-blue mb-4">
-                <Shield size={32} />
+            <div className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-sm border border-gray-100">
+              <div className="w-20 h-20 bg-corporate-light rounded-2xl flex items-center justify-center text-corporate-blue mb-6">
+                <Shield size={40} />
               </div>
-              <h3 className="text-xl font-bold text-corporate-navy mb-2">Long-term Partnerships</h3>
-              <p className="text-gray-600 text-sm">Building trust through consistent, reliable, and professional service delivery.</p>
+              <h3 className="text-2xl font-bold text-corporate-navy mb-4">Long-term Partnerships</h3>
+              <p className="text-gray-600 leading-relaxed">Building trust through consistent, reliable, and professional service delivery over many years.</p>
             </div>
             
-            <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-corporate-light rounded-full flex items-center justify-center text-corporate-blue mb-4">
-                <Award size={32} />
+            <div className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-sm border border-gray-100">
+              <div className="w-20 h-20 bg-corporate-light rounded-2xl flex items-center justify-center text-corporate-blue mb-6">
+                <Award size={40} />
               </div>
-              <h3 className="text-xl font-bold text-corporate-navy mb-2">Commitment to Excellence</h3>
-              <p className="text-gray-600 text-sm">Dedicated to exceeding expectations and maintaining the highest standards.</p>
+              <h3 className="text-2xl font-bold text-corporate-navy mb-4">Commitment to Excellence</h3>
+              <p className="text-gray-600 leading-relaxed">Dedicated to exceeding expectations and maintaining the absolute highest industry standards.</p>
             </div>
           </div>
         </div>

@@ -1,4 +1,12 @@
-export const clients = [
+export interface Client {
+  id: string;
+  name: string;
+  sector?: string;
+  description?: string;
+  logoSvg?: string;
+}
+
+export const clients: Client[] = [
   { id: "ise", name: "ISE Towers Limited" },
   { id: "zameen", name: "Zameen.com" },
   { id: "rcci", name: "Rawalpindi Chamber of Commerce & Industry" },
