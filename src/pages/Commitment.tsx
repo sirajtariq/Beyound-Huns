@@ -1,5 +1,4 @@
 import Layout from '../components/layout/Layout';
-import PageHero from '../components/layout/PageHero';
 import { SectionHeading } from '../components/common/SectionHeading';
 import HomeCTA from '../components/home/HomeCTA';
 import { Search, ClipboardList, Zap, LineChart, Leaf, ShieldCheck, Users, Handshake } from 'lucide-react';
@@ -41,10 +40,6 @@ const promiseItems = [
 export default function Commitment() {
   return (
     <Layout>
-      <PageHero 
-        title="We Don't Just Provide Services." 
-        subtitle="We Deliver Peace of Mind."
-      />
       
       <section className="py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

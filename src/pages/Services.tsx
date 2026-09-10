@@ -1,5 +1,4 @@
 import Layout from '../components/layout/Layout';
-import PageHero from '../components/layout/PageHero';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { services } from '../data/services';
 import { assets } from '../data/assets';
@@ -23,10 +22,6 @@ const imageMap: Record<string, string> = {
 export default function Services() {
   return (
     <Layout>
-      <PageHero 
-        title="Our Services" 
-        subtitle="Complete Facility Solutions. One Reliable Partner."
-      />
       
       <section className="py-32 bg-gray-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

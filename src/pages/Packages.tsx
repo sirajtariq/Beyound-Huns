@@ -1,5 +1,4 @@
 import Layout from '../components/layout/Layout';
-import PageHero from '../components/layout/PageHero';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { Button } from '../components/common/Button';
 import { packages } from '../data/packages';
@@ -22,10 +21,6 @@ const imageMap: Record<string, string> = {
 export default function Packages() {
   return (
     <Layout>
-      <PageHero 
-        title="Janitor Services Packages" 
-        subtitle="Simple. Transparent. Reliable."
-      />
       
       <section className="py-32 bg-corporate-light/40 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

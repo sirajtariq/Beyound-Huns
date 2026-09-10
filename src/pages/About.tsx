@@ -1,5 +1,4 @@
 import Layout from '../components/layout/Layout';
-import PageHero from '../components/layout/PageHero';
 import HomeWhy from '../components/home/HomeWhy';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { CheckCircle2 } from 'lucide-react';
@@ -8,11 +7,6 @@ import { assets } from '../data/assets';
 export default function About() {
   return (
     <Layout>
-      <PageHero 
-        title="Who We Are" 
-        subtitle="More Than Cleaning. A Brighter Tomorrow."
-        image={assets.images.about}
-      />
       
       <section className="py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

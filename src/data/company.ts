@@ -3,7 +3,7 @@ export const companyInfo = {
   tagline: "Services Beyond your Imagination",
   slogan: "Cleaner Spaces. Healthier People. Brighter Tomorrows.",
   email: "beyond.huns2018@gmail.com",
-  phone: "+92 342 650 56 75",
+  phone: "+92 342 6505675",
   address: "A. New Shakriyal, Islamabad.",
   website: "www.beyondhuns.com",
   socials: {
