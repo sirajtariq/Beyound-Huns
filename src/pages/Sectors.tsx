@@ -1,5 +1,4 @@
 import Layout from '../components/layout/Layout';
-import PageHero from '../components/layout/PageHero';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { sectors } from '../data/sectors';
 import { Building2, Landmark, GraduationCap, Activity, Store, Home } from 'lucide-react';
@@ -27,11 +26,6 @@ const bgMap: Record<string, string> = {
 export default function Sectors() {
   return (
     <Layout>
-      <PageHero 
-        title="We Deliver Cleaner, Safer Spaces Across Islamabad" 
-        subtitle="Providing dedicated facility solutions to diverse environments."
-        image={assets.images.iseTowers}
-      />
       
       <section className="py-32 bg-corporate-light/30 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

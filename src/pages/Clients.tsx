@@ -1,20 +1,13 @@
 import Layout from '../components/layout/Layout';
-import PageHero from '../components/layout/PageHero';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { clients } from '../data/clients';
 import HomeCTA from '../components/home/HomeCTA';
 import { Shield, Building, Award } from 'lucide-react';
-import { assets } from '../data/assets';
 import { ClientLogo } from '../components/common/ClientLogo';
 
 export default function Clients() {
   return (
     <Layout>
-      <PageHero 
-        title="Our Client Portfolio" 
-        subtitle="Trusted by Leading Businesses & Institutions"
-        image={assets.images.iseTowers}
-      />
       
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

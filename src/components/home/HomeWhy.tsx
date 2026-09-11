@@ -1,36 +1,29 @@
-import { CheckCircle2 } from 'lucide-react';
+import { UserCheck, ShieldCheck, Clock, ShieldAlert, Sliders, Quote } from 'lucide-react';
 import { SectionHeading } from '../common/SectionHeading';
 import { assets } from '../../data/assets';
 
 const reasons = [
-  { title: "Trained Workforce", desc: "Professional, responsible and service-focused personnel." },
-  { title: "Professional Standards", desc: "Consistent standards across every assignment." },
-  { title: "Reliable Support", desc: "We understand that your business cannot wait." },
-  { title: "Customer Focus", desc: "Solutions tailored to your facility and operational needs." },
-  { title: "Flexible Solutions", desc: "Adaptable services for every scale." }
+  { num: "01", title: "Trained Workforce", desc: "Professional, responsible and service-focused personnel.", icon: <UserCheck size={28} /> },
+  { num: "02", title: "Quality You Can See", desc: "Consistent standards across every assignment.", icon: <ShieldCheck size={28} /> },
+  { num: "03", title: "Reliable & Responsive", desc: "We understand that your business cannot wait.", icon: <Clock size={28} /> },
+  { num: "04", title: "Safety First", desc: "Safe practices for your people, property and workplace.", icon: <ShieldAlert size={28} /> },
+  { num: "05", title: "Flexible Solutions", desc: "Services tailored to your facility and operational needs.", icon: <Sliders size={28} /> }
 ];
 
 export default function HomeWhy() {
   return (
-    <section className="py-32 relative overflow-hidden bg-corporate-navy">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+    <section className="py-28 relative overflow-hidden bg-[#0A2540] text-white">
+      {/* Background Subtle Photo Overlay */}
+      <div className="absolute inset-0 z-0 opacity-15 mix-blend-overlay">
         <img 
           src={assets.images.about} 
           alt="Why Choose Beyond Huns" 
-          className="w-full h-full object-cover opacity-10 mix-blend-luminosity"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-corporate-navy via-corporate-navy/95 to-corporate-navy"></div>
       </div>
 
-      {/* Curved Top (CSS implementation) */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-10">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[60px]">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-gray-50"></path>
-        </svg>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
         <SectionHeading 
           title="Why Choose Beyond Huns?" 
           subtitle="More than a service. A partner you can rely on."
@@ -38,25 +31,59 @@ export default function HomeWhy() {
           light
         />
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        {/* 5 Pillar Badges matching PDF Page 4 */}
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {reasons.map((reason, index) => (
-            <div key={index} className="flex flex-col items-center text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 hover:-translate-y-2 transition-all duration-300 group">
-              <div className="w-20 h-20 rounded-full bg-corporate-blue/20 flex items-center justify-center mb-6 text-corporate-accent group-hover:bg-corporate-blue group-hover:text-white transition-colors duration-300 shadow-[0_0_20px_rgba(0,184,217,0.1)]">
-                <CheckCircle2 size={36} />
+            <div 
+              key={index} 
+              className="flex flex-col items-center text-center p-6 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 hover:bg-white/10 hover:border-cyan-400/40 hover:-translate-y-1.5 transition-all duration-300 group"
+            >
+              <span className="text-xs font-black tracking-widest text-cyan-400 mb-4 bg-cyan-400/10 px-2.5 py-1 rounded-full border border-cyan-400/20">
+                {reason.num}
+              </span>
+              
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 border border-cyan-400/20 flex items-center justify-center mb-5 text-cyan-300 group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300 shadow-lg">
+                {reason.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{reason.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{reason.desc}</p>
+              
+              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                {reason.title}
+              </h3>
+              
+              <p className="text-gray-300 text-xs leading-relaxed">
+                {reason.desc}
+              </p>
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Curved Bottom */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
-        <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[60px] rotate-180">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-corporate-light"></path>
-        </svg>
+        {/* Bottom Quote Banner from PDF Page 4 */}
+        <div className="mt-16 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-blue-900/80 via-[#0052CC]/80 to-blue-950/80 border border-white/20 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+          <Quote size={80} className="absolute -bottom-6 -right-6 text-white/5 pointer-events-none" />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-8 space-y-3">
+              <span className="text-cyan-300 font-extrabold uppercase text-xs tracking-widest block">
+                PEOPLE MAKE THE DIFFERENCE.
+              </span>
+              <p className="text-lg sm:text-xl font-medium text-white leading-relaxed">
+                "Behind every well-maintained facility is a team that takes responsibility, pays attention to detail and genuinely cares about the customer experience."
+              </p>
+            </div>
+            
+            <div className="lg:col-span-4 text-left lg:text-right">
+              <span className="text-cyan-200 text-sm font-semibold italic block">
+                Your Facility Deserves Better.
+              </span>
+              <span className="text-xs text-gray-300 mt-1 block">
+                Let Beyond Huns take care of it.
+              </span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
 }
+

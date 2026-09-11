@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import Layout from '../components/layout/Layout';
-import PageHero from '../components/layout/PageHero';
 import { companyInfo } from '../data/company';
 import { Button } from '../components/common/Button';
 import { Phone, Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
-import { assets } from '../data/assets';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -46,11 +44,6 @@ export default function Contact() {
 
   return (
     <Layout>
-      <PageHero 
-        title="Let's Build Cleaner, Safer Spaces Together" 
-        subtitle="Get in touch with our team today to discuss your facility management needs."
-        image={assets.images.contactBackground}
-      />
       
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

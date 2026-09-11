@@ -5,6 +5,7 @@ import HomeServices from '../components/home/HomeServices';
 import HomeWhy from '../components/home/HomeWhy';
 import HomeSectors from '../components/home/HomeSectors';
 import HomeClients from '../components/home/HomeClients';
+import HomeCommitment from '../components/home/HomeCommitment';
 import HomeCTA from '../components/home/HomeCTA';
 
 export default function Home() {
@@ -16,7 +17,9 @@ export default function Home() {
       <HomeWhy />
       <HomeSectors />
       <HomeClients />
+      <HomeCommitment />
       <HomeCTA />
     </Layout>
   );
 }
+

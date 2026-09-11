@@ -21,6 +21,15 @@ export default {
       boxShadow: {
         'card': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
         'card-hover': '0 10px 30px -4px rgba(0, 0, 0, 0.1)',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 35s linear infinite',
       }
     },
   },
