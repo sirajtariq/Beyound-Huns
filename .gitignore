@@ -1,4 +1,14 @@
 node_modules
-.env
 dist
-*.pdf
+build
+.env
+.env.*
+.vscode
+.idea
+.DS_Store
+*.log
+yarn-error.log
+yarn-debug.log
+*.pid
+*.seed
+*.pid.lock
