@@ -19,7 +19,7 @@ export default function Contact() {
           <SectionHeading
             align="left"
             eyebrow="Get In Touch With Us Today"
-            title="Let's Build Cleaner, Safer Spaces Together"
+            title="Let's Build Cleaner, Safer Spaces *Together*"
             lead="Whether you need janitor services for your office, facility or a large enterprise, our team is ready to provide the right solution for your needs."
           />
           <ul className="contact-list">

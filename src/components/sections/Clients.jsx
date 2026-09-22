@@ -1,4 +1,4 @@
-﻿import { clients, clientsIntro } from '../../data/clients';
+import { clients, clientsIntro } from '../../data/clients';
 import Container from '../common/Container';
 import SectionHeading from '../common/SectionHeading';
 
@@ -10,7 +10,7 @@ export default function Clients() {
       <Container>
         <SectionHeading
           eyebrow="Our Client Portfolio"
-          title="Trusted by Leading Businesses & Institutions"
+          title="Trusted by Leading *Businesses & Institutions*"
           lead={clientsIntro}
         />
       </Container>

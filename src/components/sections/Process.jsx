@@ -15,7 +15,7 @@ export default function Process() {
       <Container>
         <SectionHeading
           eyebrow="Our commitment"
-          title="More Than a Service. Peace of Mind."
+          title="More Than a Service. *Peace of Mind.*"
           lead="A professional approach, dependable people and consistent quality — from the first day to every day after."
         />
         <ol className="process">

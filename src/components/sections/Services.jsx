@@ -9,7 +9,7 @@ export default function Services() {
       <Container>
         <SectionHeading
           eyebrow="Our Services"
-          title="Complete Facility Solutions. One Reliable Partner."
+          title="Complete Facility Solutions. *One Reliable Partner.*"
           lead="From cleanliness to maintenance, we keep your workplace running."
         />
 
