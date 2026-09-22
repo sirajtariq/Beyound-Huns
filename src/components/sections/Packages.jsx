@@ -11,7 +11,7 @@ export default function Packages() {
       <Container>
         <SectionHeading
           eyebrow="Janitor Services Packages"
-          title="Simple. Transparent. Reliable."
+          title="Simple. *Transparent.* Reliable."
           lead={packagesIntro}
         />
         <div className="card-grid card-grid--3">

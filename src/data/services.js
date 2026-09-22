@@ -4,9 +4,11 @@ import { SprayCan, Wrench, Users, Package } from 'lucide-react';
 export const serviceGroups = [
   {
     id: 'cleaning',
+    image: 'assets/restroom-cleaning.png',
     icon: SprayCan,
     title: 'Cleaning & Hygiene',
     description: 'A cleaner environment for healthier people.',
+    theme: 'blue',
     items: [
       'Janitorial Services',
       'General Cleaning',
@@ -17,9 +19,11 @@ export const serviceGroups = [
   },
   {
     id: 'maintenance',
+    image: 'assets/facility-maintenance.png',
     icon: Wrench,
     title: 'Maintenance & Technical',
     description: 'Keeping your spaces in perfect shape.',
+    theme: 'navy',
     items: [
       'Maintenance Services',
       'Plumber Services',
@@ -30,16 +34,26 @@ export const serviceGroups = [
   },
   {
     id: 'staffing',
+    image: 'assets/facility-team.png',
     icon: Users,
     title: 'Staffing & Facility Support',
     description: 'Reliable people for your business needs.',
-    items: ['Contractual Staff Services'],
+    theme: 'orange',
+    items: [
+      'Contractual Staff Services',
+      'Recruitment & Selection',
+      'Payroll Management',
+      'Training & Development',
+      'HR Consulting'
+    ],
   },
   {
     id: 'supplies',
+    image: 'assets/floor-care.png',
     icon: Package,
     title: 'Office & Business Supplies',
     description: 'Everyday essentials, delivered with convenience.',
+    theme: 'purple',
     items: [
       'Office / School Stationery',
       'Computer Accessories',

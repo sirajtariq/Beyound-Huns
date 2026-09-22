@@ -8,7 +8,7 @@ export default function WhyUs() {
       <Container>
         <SectionHeading
           eyebrow="Why Choose Beyond Huns?"
-          title="More Than a Service. A Partner You Can Rely On."
+          title="More Than a Service. *A Partner You Can Rely On.*"
           lead={whyUsIntro}
         />
         <div className="card-grid card-grid--5">

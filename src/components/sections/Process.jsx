@@ -15,13 +15,12 @@ export default function Process() {
       <Container>
         <SectionHeading
           eyebrow="Our commitment"
-          title="More Than a Service. Peace of Mind."
+          title="More Than a Service. *Peace of Mind.*"
           lead="A professional approach, dependable people and consistent quality — from the first day to every day after."
         />
         <ol className="process">
           {steps.map((step, i) => (
             <li key={step.title} className="process__step">
-              {/* <span className="process__num">0{i + 1}</span> */}
               <div className="process__icon"><step.icon size={21} aria-hidden /></div>
               <h3>{step.title}</h3>
               <p>{step.text}</p>

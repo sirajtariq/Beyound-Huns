@@ -32,7 +32,7 @@ export const whyUsPoints = [
 ];
 
 export const about = {
-  heading: 'Who We Are',
+  heading: 'Who *We Are*',
   lead: 'More than cleaning. A brighter tomorrow.',
   paragraphs: [
     'Beyond Huns is a professional facility management and support services company committed to creating cleaner, safer and better-maintained environments for businesses, offices and institutions.',

@@ -8,7 +8,7 @@ export default function Sectors() {
       <Container>
         <SectionHeading
           eyebrow="We Serve Islamabad & Beyond"
-          title="Cleaner, Safer Spaces Across Every Sector"
+          title="Cleaner, Safer Spaces *Across Every Sector*"
           lead="From corporate offices and commercial buildings to institutions and residential communities — reliable facility solutions for a cleaner, brighter Islamabad."
         />
         <ul className="sector-list">
