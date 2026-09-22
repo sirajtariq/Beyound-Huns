@@ -21,7 +21,6 @@ export default function Process() {
         <ol className="process">
           {steps.map((step, i) => (
             <li key={step.title} className="process__step">
-              {/* <span className="process__num">0{i + 1}</span> */}
               <div className="process__icon"><step.icon size={21} aria-hidden /></div>
               <h3>{step.title}</h3>
               <p>{step.text}</p>
