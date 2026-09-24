@@ -6,8 +6,8 @@ export const site = {
   phone: '+92 342 650 56 75',
   phoneHref: 'tel:+923426505675',
   whatsapp: 'https://wa.me/923426505675',
-  email: 'beyond.huns2018@gmail.com',
-  address: 'A. New Shakriyal, Islamabad',
+  email: 'info@beyondhuns.com',
+  address: 'ISE Towers Jinnah Avenue, Islamabad',
   website: 'www.beyondhuns.com',
 };
 
