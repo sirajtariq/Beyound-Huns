@@ -22,7 +22,7 @@ export default function App() {
         <Process />
         <Packages />
         <Sectors />
-        <Clients />
+        {/* <Clients /> */}
         <Contact />
       </main>
       <Footer />
